@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Bienvenido! esta es la lista de mascotas para adoptar: </h1>
+    <ol>
+      <%@pets.each_with_index do |pet,index|%>
+      <li> <a href="/pets/<%=index+1%>"><%=pet.name%></a></li>
+      <%end%>
+    </ol>
+    <a href="/pets/new"> <button type="button">Crea tu mascota!</button> </a>
+
+  </body>
+</html>

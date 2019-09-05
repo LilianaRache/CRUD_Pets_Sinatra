@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Puesdes editar los datos de <%=@pet.name%>.</h1>
+    <form action="/pets" method="post">
+      <input type="hidden" name="_method" value="patch">
+      <input type="hidden" name="id" value="<%=@pet.id%>">
+      <p>Cambia el nombre</p>
+      <input type="text" name="name"value="<%=@pet.name%>">
+      <p>Cambia la raza</p>
+      <input type="text" name="raza"value="<%=@pet.raza%>">
+      <p>Cambia la edad </p>
+      <input type="text" name="edad"value="<%=@pet.edad%>">
+      <p>Pon la nueva URL de la tu mascota</p>
+      <input type="text" name="foto"value="<%=@pet.foto%>">
+      <br> <br>
+      <button type="submit" name="button"> Actualizar</button>
+    </form>
+    <br>
+    <a href="/pets"><button type="button">Regresar</button></a>
+  
+  </body>
+</html>

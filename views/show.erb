@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <h1>Este es<%=@pet.name%></h1>
+    <img src="<%=@pet.foto%>" alt="foto mascota">
+    <h1>Su raza es <%=@pet.raza%> </h1>
+    <h1>Su edad es <%=@pet.edad%> </h1>
+    <a href="/pets"><button type="button">Regresar</button></a>
+    <a href="/pets/<%=@pet.id%>/edit"> <button type="button">Editar</button></a>
+    <form action="/pets" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="hidden" name="id" value="<%=@pet.id%>">
+    <button type="submit">Eliminar</button>
+    </form>
+
+  </body>
+</html>
